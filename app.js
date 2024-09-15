@@ -1,14 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const images = document.querySelectorAll("img");
+const articles = document.querySelectorAll('article');
 
-    for(const image of images) {
-        fetch("https://dog.ceo/api/breeds/image/random")
-        .then(response => response.json())
-        .then(data => {
-            image.src = data.message
-            image.width = 100;
-            image.height = 100;
-         })
-    }
+articles.forEach(article => {
+    const recipeImage = article.querySelector('.recipe-image');
 
+    // Show image on mouseover
+    article.addEventListener('mouseover', function() {
+        recipeImage.style.display = 'block';
+    });
+
+    // Hide image on mouseout
+    article.addEventListener('mouseout', function() {
+        recipeImage.style.display = 'none';
+    });
+});
 })

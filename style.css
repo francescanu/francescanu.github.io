@@ -7,7 +7,8 @@ body{
     margin: 0px;
     padding: 8px;
     font-family: "Fredoka One", sans-serif;
-    width: 16%;
+    width: 100%;
+    text-align: center;
 }
 ul{
     margin: 0px
@@ -16,55 +17,91 @@ body > header{
     background-color: orange;
     color: white;
     display: flex;
-    height: 12vh;
+    height: 20vh;
     align-items: center;
     justify-content: space-around;
 }
 
-#nav-ul{
-    display: flex;
+
+article{
+    outline-style: groove;
+    outline-color: grey;
+    padding: 3px;
 }
 
-#nav-ul > li{
+article > header{
+    margin: 0px;
     padding: 8px;
-    margin: 16px;
-}
-
-body > header > nav > ul{
-    list-style: none;
-    text-decoration: none;
-}
-.navButton{
-    color: white;
-    text-decoration: none;
-    padding: 12px;
-    border: 1px solid white;
-    border-radius: 10%;
-}
-body > main article{
-    width: 70%;
-    margin: auto;
-}
-
-#main-content{
-    display: flex;
-    justify-content: space-around;
-}
-
-#main-content > div{
-    width: 70%;
-}
-
-#main-content aside{
-    width: 20%;
-}
-
-h2{
+    font-family: "Fredoka One", sans-serif;
     text-align: center;
 }
-form{
+
+article > main >p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 24px;
+    font-weight: normal;
+    background: linear-gradient(to bottom, black 0%, transparent 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
 }
+
+img{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 10px;
+    border-radius: 15%;
+    align-items: center;
+}
+
+.recipe-image{
+    display: none;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: auto; 
+    grid-template-areas: 
+        'recipe1 recipe2 recipe3'
+        'recipe4 recipe5 recipe6';
+    gap: 50px;
+    margin: 10px;
+}
+
+#recipe1{
+    grid-area: recipe1
+}
+
+#recipe2{
+    grid-area: recipe2
+}
+
+#recipe3{
+    grid-area: recipe3
+}
+
+#recipe4{
+    grid-area: recipe4
+}
+
+#recipe5{
+    grid-area: recipe5
+}
+
+#recipe6{
+    grid-area: recipe6
+}
+
+
+
+
+
+
+
+
 body > footer{
     background-color: orange;
     display: flex;
@@ -73,17 +110,20 @@ body > footer{
     display: flex;
     list-style: none;
 }
+#links{
+    display: flex;
+    list-style: none;
+    margin-right: 550px;
+}
+
 #footer-ul > div > li{
-    margin-left: 12px;
+    margin-left: 50px;
     
 }
 
 #footer-ul > div > li > a{
-    margin-left: 12px;
+    margin-left: 50px;
     color: white;
     text-decoration: none;
 }
 
-img{
-    border-radius: 50%;
-}
